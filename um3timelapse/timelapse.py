@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/local/bin/python
 import os
 import argparse
 from requests import exceptions
