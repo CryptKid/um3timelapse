@@ -1,7 +1,8 @@
 FROM python:latest
 RUN apt update
 RUN apt install ffmpeg -y
+RUN pip install requests
 RUN rm -rf /var/lib/apt/lists/*
 COPY um3timelapse /scripts
 #VOLUME [/videos]
-ENTRYPOINT ["/usr/local/bin/python", "/scripts/timelapse.py"] 
+ENTRYPOINT ["python", "/scripts/timelapse.py"] 
